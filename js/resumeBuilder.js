@@ -63,12 +63,14 @@ var education = {
 var projects = {
 	"project" : [ {
 		"title" 		: "Portfolio",
+		"address"		: "#",
 		"dates" 		: "September 2015",
 		"description"	: "This was my first basic project to get a feel for HTML and CSS. It used a bunch of basic concepts as well as responsive image techniques, responsive web design techniques and the bootstrap framework.",
 		"image" 		: ""
 		},
 		{
 		"title" 		: "WMU",
+		"address"		: "peterd413.github.io/WMU/wmumain.html",
 		"dates" 		: "October 2015",
 		"description"	: "This project was a stand-alone project for the local soccer club.",
 		"image" 		: ""
