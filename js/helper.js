@@ -23,6 +23,10 @@ var HTMLgithub = '<u1 class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<u1 class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></u1>';
 var HTMLlocation = '<u1 class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></u1>';
 
+var HTMLfacebook = '<ul class="flex-item"><a href=%data%><li class="brandico-facebook-rect"> </li></a></ul>';
+var HTMLlinkedIN = '<ul class="flex-item"><a href=%data%><li class="brandico-linkedin-rect"> </li></a></ul>';
+
+
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 

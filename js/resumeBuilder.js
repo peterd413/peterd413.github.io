@@ -7,11 +7,16 @@ var bio = {
 		mobile   : "(207)491-2905",
 		email    : "peterd413@yahoo.com",
 		github   : "peterd413",
-		location : "Farmington, ME"
+		location : "Farmington, ME",
+		facebook : "http://www.facebook.com/peter.decarolis",
+		linkedin : "https://www.linkedin.com/pub/peter-decarolis/0/a81/2b4"
 	},
 	"pictureURL" 	: "images/me.jpg",
 	"welcomemsg"	: "WelcomeMsg Placeholder",
-	"skills" 		: ["System Verilog ", "Synplify_Pro ", "HTML/CSS", "JavaScript", "Source Control (CVS, SVN, GIT/GitHub)"]
+	"skills" 		: ["Languages (System Verilog, Perl, )",
+					   "Synplify_Pro ",
+	                   "Web Skills(HTML/CSS JavaScript Grunt Bootstrap)",
+	                   "Source Control (CVS, SVN, GIT/GitHub)"]
 };
 
 
@@ -22,8 +27,8 @@ var workExperience = {
 			position    : "Senior Hardware Engineer",
 			employer    : "Extreme Networks (formerly Enterasys Networks)",
 			dates       : "June 1996 - May 2015",
-			location    : "Salem, NH (Primarily Telecommute)",
-			description : "Responsible for complete design cycle of very large FPGAs and ASICs in the networking area including architecting, documenting, coding, synthesizing and timing and testing. The first 9 years, I worked on site. The last 9 years I have worked full time from my home office telecommuting."
+			location    : "Salem, NH",
+			description : "Responsible for complete design cycle of large FPGAs and ASICs in the networking area including architecting, documenting, coding, synthesizing, timing and testing. The last 9 years I telecommuted full time from my home office."
 		},
 		{
 			position    : "Soccer Coach",
@@ -87,9 +92,12 @@ var contactArray = formattedMobile + formattedEmail + formatedGithub + formatted
 //var temp = HTMLcontactGeneric.replace("%contact%", "Contact Information");
 var formattedContactInfo = HTMLcontactGeneric.replace("%data%", contactArray);
 
-
+var formattedFacebook = HTMLfacebook.replace("%data%", bio.contacts.facebook);
+var formattedLinkedIN = HTMLlinkedIN.replace("%data%", bio.contacts.linkedin);
+var socialMediaArray = formattedFacebook + formattedLinkedIN;
 
 $("#header").prepend(formattedbioPic);
+$("#header").prepend(socialMediaArray);
 $("#header").prepend(contactArray);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
