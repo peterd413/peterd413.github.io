@@ -13,11 +13,26 @@ var bio = {
 	},
 	"pictureURL" 	: "images/me.jpg",
 	"welcomemsg"	: "WelcomeMsg Placeholder",
-	"skills" 		: ["Languages (System Verilog, Perl, )",
-					   "Synplify_Pro ",
+	"skills" 		: ["Languages (System Verilog, Perl, Python, tcl, XML)",
+					   "Tools(Synplify_Pro, DC, TimingAnalyzer, Linting, CDC)",
+					   "Microsoft(Word, Excel, Visio, PowerPoint)",
 	                   "Web Skills(HTML/CSS JavaScript Grunt Bootstrap)",
-	                   "Source Control (CVS, SVN, GIT/GitHub)"]
+	                   "Source Control (CVS, SVN, GIT/GitHub)",
+	                   "Lab tools(Logic Analyzers, Packet Sniffers)"]
 };
+
+/*
+Make work on mobile phones.
+encapsulation
+bio.display =
+bio.display = function() { };
+bio.display();
+Change fonts and colors.
+Run Beautifier
+http://www.codebeautifier.com/
+Put notes for all customization
+https://discussions.udacity.com/t/css-position-layout-beginner/28620
+*/
 
 
 //dot notation
@@ -47,7 +62,7 @@ var education = {
 			"name"          : "Rochester Institute of Technology",
 			"location"      : "Rochester, NY",
 			"major"         : "Electrical Engineering",
-			"degree"        : "BS",
+			"degree"        : "Bachelor of Science",
 			"dates" 		: "1991-1996"
 		},
 		{
@@ -63,14 +78,14 @@ var education = {
 var projects = {
 	"project" : [ {
 		"title" 		: "Portfolio",
-		"address"		: "#",
+		"link"		: "#",
 		"dates" 		: "September 2015",
 		"description"	: "This was my first basic project to get a feel for HTML and CSS. It used a bunch of basic concepts as well as responsive image techniques, responsive web design techniques and the bootstrap framework.",
 		"image" 		: ""
 		},
 		{
 		"title" 		: "WMU",
-		"address"		: "peterd413.github.io/WMU/wmumain.html",
+		"link"		: "http://peterd413.github.io/WMU/wmumain.html",
 		"dates" 		: "October 2015",
 		"description"	: "This project was a stand-alone project for the local soccer club.",
 		"image" 		: ""
@@ -164,11 +179,15 @@ function displayProjects () {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedProjectTitle    	= HTMLprojectTitle.replace("%data%",projects.project[project_index].title);
+		var formattedProjectLink        = HTMLprojectLink.replace("%link%",projects.project[project_index].link );
+
 		var formattedProjectDates    	= HTMLprojectDates.replace("%data%",projects.project[project_index].dates);
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects.project[project_index].description);
 		var formattedProjectImage 		= HTMLprojectImage.replace("%data%",projects.project[project_index].image);
 
-		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProject = formattedProjectLink + formattedProjectTitle;
+
+		$(".project-entry:last").append(formattedProject);
 		$(".project-entry:last").append(formattedProjectDates);
 		$(".project-entry:last").append(formattedProjectDescription);
 		if(projects.project[project_index].image.length > 0) {

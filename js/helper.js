@@ -23,8 +23,8 @@ var HTMLgithub = '<u1 class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<u1 class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></u1>';
 var HTMLlocation = '<u1 class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></u1>';
 
-var HTMLfacebook = '<ul class="flex-item"><a href=%data%><li class="brandico-facebook-rect"> </li></a></ul>';
-var HTMLlinkedIN = '<ul class="flex-item"><a href=%data%><li class="brandico-linkedin-rect"> </li></a></ul>';
+var HTMLfacebook = '<a class="social" href=%data%><span class="brandico-facebook-rect"> </span></a>';
+var HTMLlinkedIN = '<a class="social" href=%data%><span class="brandico-linkedin-rect"> </span></a>';
 
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
@@ -41,7 +41,8 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="http://peterd413.github.io/WMU/wmumain.html">%data%</a>';
+var HTMLprojectLink = '<a href="%link%">'
+var HTMLprojectTitle = '%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';

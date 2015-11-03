@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Cinzel", sans-serif;
 }
 
 
@@ -37,7 +37,8 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+ /* color: #f5a623;*/
+  color : #ff0000;
   line-height: 48px;
   display: inline;
 }
@@ -45,7 +46,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #1f1f14;
   line-height: 29px;
   padding: 10px;
 }
@@ -53,7 +54,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #a1a1a1;
   line-height: 22px;
 }
 
@@ -92,15 +93,22 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: black;
   line-height: 21px;
 }
 
 a {
   color: #1199c3;
+  /*color: #000033;*/
+  font-weight: bold;
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+.social {
+  color: #1199c3;
+  display: flex;
 }
 
 .welcome-message {
@@ -130,7 +138,7 @@ a {
 
 .gray-text {
   font-weight: bold;
-  color: #4d944d;
+  color: #ccccb3;
 }
 
 .gray {
@@ -145,7 +153,8 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
+  background-color: #000033;
 }
 
 .flex-box {
@@ -170,6 +179,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-radius: 25px;
 }
 
 img {
@@ -180,17 +190,6 @@ span {
   padding: 5px;
 }
 
-#lets-connect {
-  text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
 
 @media only screen and (max-width:900px) {
   .biopic {
@@ -199,9 +198,6 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
   .biopic {
     width: 150px;
   }
