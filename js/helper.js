@@ -1,11 +1,4 @@
-/*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
 
 
 /*
@@ -13,28 +6,33 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLresponsiveBr = '<span class="responsive"><br></span>';
 var HTMLheaderRole = '<span class="gray-text">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<u1 class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></u1>';
-var HTMLemail = '<u1 class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></u1>';
-var HTMLtwitter = '<u1 class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></u1>';
-var HTMLgithub = '<u1 class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></u1>';
-var HTMLblog = '<u1 class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></u1>';
-var HTMLlocation = '<u1 class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></u1>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="gray-text">%data%</span></li>';
+var HTMLcontactStart = '<ul id="contact-list">';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="gray-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="gray-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="gray-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="gray-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="gray-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="gray-text">%data%</span></li>';
+var HTMLcontactEnd = '</ul>'
 
-var HTMLfacebook = '<a class="social" href=%data%><span class="brandico-facebook-rect"> </span></a>';
-var HTMLlinkedIN = '<a class="social" href=%data%><span class="brandico-linkedin-rect"> </span></a>';
+var HTMLfacebook = '<a class="social" href="http://%data%"><span class="brandico-facebook-rect"> </span></a>';
+var HTMLlinkedIN = '<a class="social" href="http://%data%"><span class="brandico-linkedin-rect"> </span></a>';
 
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart  = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsHeader = '<li class="flex-item"><span class="gray-text">%data%</span></li>';
+var HTMLskills       = '<li class="flex-item"><span class="gray-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkLink = '<a href="http://%data%">';
+var HTMLworkEmployer = '%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
@@ -48,11 +46,12 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolLink = '<a href="http://%data%">';
+var HTMLschoolName = '%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolLocation = '<div class="location-text"><br>%data%</div>';
+var HTMLschoolMajor = '<em>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
@@ -60,19 +59,10 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
-var internationalizeButton = '<button>Internationalize</button>';
+
 var googleMap = '<div id="map"></div>';
 
 
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
-$(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);
-  });
-});
 
 function inName(name) {
   var namearray = [];

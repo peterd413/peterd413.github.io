@@ -87,12 +87,13 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
+  float: center;
 
 }
 
 p {
   font-size: 14px;
+  font-weight: 500;
   color: black;
   line-height: 21px;
 }
@@ -108,7 +109,7 @@ a {
 
 .social {
   color: #1199c3;
-  display: flex;
+  display: inline;
 }
 
 .welcome-message {
@@ -120,7 +121,7 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  /*display: none;*/
 }
 
 .orange {
@@ -142,11 +143,16 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #CCCCB3;/*#f3f3f3;*/
   padding-bottom: 10px;
   clear:both;
 }
 
+.lightgray {
+  background-color: #D6D6C2;
+  padding-bottom: 10px;
+  clear:both;
+}
 .dark-gray {
   background-color: #4a4a4a;
 }
@@ -222,5 +228,11 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+  .responsive {
+    display : none;
+  }
+  ul#contact-list li {
+    display : inline;
   }
 }
