@@ -78,7 +78,7 @@ function inName(name) {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
-/*
+
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -97,7 +97,7 @@ $(document).click(function(loc) {
   logClicks(x,y);
 });
 
-*/
+
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
