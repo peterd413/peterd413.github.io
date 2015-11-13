@@ -14,7 +14,7 @@ var bio = {
     "skills": ["Languages (System Verilog, Perl, Python, tcl, XML)",
         "Tools(Synplify_Pro, DC, TimingAnalyzer, Linting, CDC)",
         "Microsoft(Word, Excel, Visio, PowerPoint)",
-        "Web Skills(HTML/CSS JavaScript Grunt Bootstrap)",
+        "Web Skills(HTML/CSS, JavaScript, Grunt, Bootstrap)",
         "Source Control (CVS, SVN, GIT/GitHub)",
         "Lab tools(Logic Analyzers, Packet Sniffers)"
     ],
